@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.sky {
+    background-color: rgb(189, 236, 242);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100vw;
+}
+
+#PumpHandle {
+    position: absolute;
+    top: 480px;
+    left: 1190px;
+    width: 250px;
+    height: 250px;
+    transition: top 0.3s ease;
+}
+
+#PumpPipe {
+    position: absolute;
+    top: 520px;
+    left: 805px;
+    width: 250px;
+    height: 250px;
+    transition: top 0.3s ease;
+}
+
+#PumpBox {
+    position: absolute;
+    top: 600px;
+    left: 1200px;
+    width: 250px;
+    height: 250px;
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+}
+
+.bulge {
+    transform: scale(1) translateY(-10px);
+}
+
+.balloon {
+    transition: width 0.5s, height 0.5s, transform 2s ease;
+    position: relative;
+    opacity: 1;
+    cursor: pointer;
+    display: inline-block;
+}
+
+
+.balloon-text {
+    position: absolute;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    pointer-events: none;
+}
+.balloon:hover {
+    transform: scale(1);
+}
+.balloon-burst {
+    animation: burstAnimation 0.5s forwards;
+    transition: opacity 1s ease;
+    opacity: 0;
+}
+
+
+.explosion {
+    width: 50px;  
+    height: 50px; 
+    background: rgba(255, 0, 0, 0.5);
+    border-radius: 50%; 
+    pointer-events: none; 
+}
+
+.letter-display {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+    z-index: 9999;
+    transition: opacity 1s;
+    padding: 10px;
+    background-color: rgba(243, 208, 57, 0.838);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+}
